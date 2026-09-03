@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSSE Boys Okara (Roll No Slip)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topband"></div>
+<div class="wrap">
+  <header>
+    <img class="logo" src="logo.png" alt="NSSE Logo">
+    <h1 id="hSchoolShort">NSSE Boys Okara (Roll No Slip)</h1>
+    <div class="sub" id="hSubtitle">Boys Campus &middot; Okara</div>
+    <p id="hTagline">Admission Test &mdash; Roll Number Slip (All Classes)</p>
+  </header>
+
+  <div class="schedule-card">
+    <div class="stitle">Admission Test Schedule</div>
+    <div id="scheduleRows"></div>
+  </div>
+
+  <div class="search-card">
+    <label for="bformInput">B-Form Number</label>
+    <div class="search-row">
+      <input id="bformInput" type="text" placeholder="e.g. 35302-1405075-7" autocomplete="off" inputmode="numeric">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="hint">Enter the B-Form number with or without dashes. This works for ECE/Nursery, Prep/KG and Class One.</div>
+  </div>
+
+  <div id="loadStatus" class="load-status">Loading student records&hellip;</div>
+
+  <div id="message"></div>
+
+  <div class="multi-card" id="multiCard">
+    <div class="mtitle">Multiple records found for this B-Form number. Please select the correct student:</div>
+    <div id="multiList"></div>
+  </div>
+
+  <div class="slip" id="slip">
+    <div class="slip-head">
+      <img src="logo.png" alt="NSSE">
+      <div class="school">
+        <span id="slipSchoolName">Nawaz Sharif School of Eminence</span>
+        <small id="slipSubHead">Boys Campus, Okara &mdash; Admission Test</small>
+      </div>
+    </div>
+    <div class="shift-strip" id="shiftStrip">-</div>
+    <div class="slip-body">
+      <div class="name-block">
+        <div class="roll-label">Roll Number</div>
+        <div class="roll-big" id="rollBig">-</div>
+        <div class="stu-name" id="stuName">-</div>
+        <div class="stu-class" id="stuClass">-</div>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-item">
+          <div class="k">Registration No</div>
+          <div class="v" id="dReg">-</div>
+        </div>
+        <div class="detail-item full highlight">
+          <div class="k">Test Date &amp; Shift</div>
+          <div class="v" id="dDate">-</div>
+        </div>
+        <div class="detail-item full">
+          <div class="k">Father Name</div>
+          <div class="v" id="dFather">-</div>
+        </div>
+        <div class="detail-item full">
+          <div class="k">B-Form Number</div>
+          <div class="v" id="dBform">-</div>
+        </div>
+        <div class="detail-item full" id="mobileWrap">
+          <div class="k">Mobile No</div>
+          <div class="v" id="dMobile">-</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-box">
+      <div class="rtitle">Important Instructions</div>
+      <ul>
+        <li>Children will appear in the test according to the roll number and shift shown above.</li>
+        <li>Reach the school at least 30 minutes before the shift time.</li>
+        <li>Bring the original Roll Number Slip on the test day.</li>
+        <li>B-Form is mandatory. The student must bring the B-Form with them.</li>
+        <li>Children must bring their own stationery, pencils, colors and other supplies.</li>
+        <li>No parents are allowed inside on the test day. Only children are allowed.</li>
+      </ul>
+    </div>
+
+    <div class="slip-foot">
+      <button class="action-btn" id="clearBtn">Clear</button>
+      <button class="action-btn primary" id="printBtn">Print Slip</button>
+    </div>
+  </div>
+
+  <footer>
+    For queries and further information: <span class="phone" id="footerPhone">+92 325 3111880</span><br>
+    Admissions Office &mdash; <span id="footerSchool">Nawaz Sharif School of Eminence (NSSE) Boys Campus, Okara</span>
+  </footer>
+</div>
+
+<script src="xlsx.full.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
